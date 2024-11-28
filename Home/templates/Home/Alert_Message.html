@@ -1,0 +1,28 @@
+
+
+<!-- Html page for handling alert messages  -->
+<div class="Alert_Message">
+    {% if messages %}
+
+        
+        {% for msg in messages %}
+
+            <!-- For Success Message -->
+            {% if msg.tags == 'success' %}
+                <div class="success-msg">
+                    <strong> <i class="fa-solid fa-circle-check"></i> </strong> {{msg}}
+                </div>
+            
+            <!-- For Warning Message -->
+            {% elif msg.tags == 'danger' %}
+                <div class="error-msg">
+                    <strong> <i class="fa-solid fa-triangle-exclamation"></i> </strong> {{msg}}
+                </div>
+                
+            {% endif %}
+                
+        {% endfor %}
+            
+    {% endif %}
+</div>
+    

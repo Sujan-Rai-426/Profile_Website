@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-------------------------------- fontawesome cdn Link ------------------------------ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!------------------------------Swiper Js CDN link  ------------------------------>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!----------------------------- Bootstrap Icon cdn link --------------------------- -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- ---------- stylesheet css link --------- -->
+    <link rel="stylesheet" href="{% static 'css/computer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mobile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tab.css' %}">
+    
+
+
+    <title> {% block title %}   <!--Title Here-->   {% endblock title %} | Sujan Rai </title>
+</head>
+<body>
+
+        <!-- Navbar and Alert Message here -->
+    <header>
+        {% include 'Home/navbar.html' %}
+
+        {% include 'Home/Alert_Message.html' %}
+    </header>
+
+
+
+        <!-- Main Content Here -->
+    <main>
+        {% block content %}
+
+        {% endblock content %}
+    </main>
+
+
+
+        <!-- footer here -->
+    <footer>
+        {% include 'Home/footer.html' %}
+    </footer>
+
+
+    <!-- Typed.js cdn link for typing animation -->
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+            <!-- Setup and start animation! -->
+        <script>
+            var typed = new Typed('#element', {
+            strings: ['Full-stack developer...', 'Web Developer...', 'Gamer and curious Learner...','Full-Stack Developer, Gamer, Learner...'],
+            typeSpeed: 100,
+            });
+        </script>
+
+        <!---------------- Swiper Js script link ---------------->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"> </script>
+
+        <!-- Link Custom script -->
+        <script src="/static/js/script.js"></script>
+    
+</body>
+</html>

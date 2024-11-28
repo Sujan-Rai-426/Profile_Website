@@ -1,0 +1,325 @@
+
+
+{% extends 'Home/base.html' %}
+
+{% block title %} Profile Home Page {% endblock title %}
+
+
+
+{% block content %}
+
+    <!-- ======= Toggle button ======= -->  
+    <input type="checkbox" id="toggle-switch"/>
+    <label id="toggle-switch-label" for="toggle-switch"></label>
+
+<div class="main_body">
+        <!------------------------------ First -> Home Section ------------------------------>
+        <section id="HOME">
+                <section class="home-section">
+
+                    <div class="home-left">
+                        <h3> Hi, <small> I'm <span class="text-skyblue">Sujan Rai</span></small> </h3> 
+                        <h5><b><span id="element"></span></b></h5>
+                        
+                            <div>
+
+                                <p>Another curious person who is always ready learn new things and Passionate about building efficient and scalable Web App.</p>
+                                    
+                                    <div  class="logo-home">
+                                        <ul>
+                                            <li> <a href="https://www.linkedin.com/in/sujan-rai-18a07b2a6/"><i class="bi bi-linkedin"></i></a> </li>
+                                            <li> <a href="https://github.com/Sujan-Rai-426"><i class="bi bi-github"></i></a> </li>
+                                            <li> <a href="https://www.facebook.com/sujan.rai.92202?mibextid=LQQJ4d"><i class="bi bi-facebook"></i></a> </li>
+                                        </ul>
+                                    </div>
+
+                            </div>
+
+    
+                            <div class="btn-box">
+                            <a href="#CONTACT-ME"> <button class="btn" type="submit">  Message <i class="bi bi-send-plus-fill"></i></button> </a>
+                            <a href="https://leetcode.com/u/sujan-426/"> <button type="submit" class="btn">Leetcode </button></a>
+                            </div>
+                    </div>
+
+                    <div class="home-right">
+                        <img src="/static/img/developer.webp" alt="devloper.webp">
+                    </div>
+
+                </section> 
+                <hr> 
+    
+        </section>
+
+
+
+        <!------------------------------ Second -> About Section ------------------------------>
+        <section id="ABOUT">
+
+            <h1 class="section-primary-heading">About</h1>
+            <span> <h2 class="section-secondary-heading">- Everything about me -</h2> </span>
+                <section class="about-section">
+
+                    <div class="about-left">
+                        <img src="/static/img/sujan1.jpg" alt="sujan">
+                    </div>
+
+                    <div class="about-right">
+                        <p><b class="text-purple big-text">Hello!!!</b> This is Sujan. My current address is Belbari, Nepal. I love creating new things using imagination and bringing them to life. Currently I'm studying Computer Science & Engineering in <b class="text-purple">Madan Bhandari Collage of Engineering, Urlabari. </b> I spent most of my time infront of my computer developing or learning new skill and in free time I like to spend time with my family and friends. </p>
+                            <br>
+                        <a href="#"><button class="btn" type="submit">Download CV <i class="fa-solid fa-download"></i> </button></a>
+                    </div>
+
+                </section>
+                <hr>
+
+        </section>
+
+
+
+
+
+
+        <!------------------------------ Third -> Skill Section ------------------------------>
+        <section id="SKILL">
+
+            <h1 class="section-primary-heading"> My Skills </h1>
+            <span> <h2 class="section-secondary-heading"> - My overall technical skills -</h2> </span>
+
+                <section class="skill-section">
+                        <br>
+                    <ul  class="skill-level">
+                        
+                        <div class="Front-End-Skill">
+                            <h1 class="text-center text-ibm text-Primary-heading"> Front End </h1>
+                            <!-------------------- For front-end-skill upload from database dynamically -------------------->
+                            {% for FrontEnd_skill in FrontEnd_skills %}
+                                <li>
+                                    <h3 class="text-ibm text-Secondary-heading">{{ FrontEnd_skill.name }}</h3> 
+                                        <div class="bar">
+                                            <span class="bar-fill" style="width: {{ FrontEnd_skill.percentage }}%; "> </span> 
+                                        </div>
+                                </li>
+                            {% endfor %}
+                        </div>
+                        <div class="Back-End-Skill">
+                            <h1 class="text-center text-ibm text-Primary-heading"> Back End </h1>
+                            <!-------------------- For front-end-skill upload from database dynamically -------------------->
+                            {% for BackEnd_skill in BackEnd_skills %}
+                                <li>
+                                    <h3 class="text-ibm text-Secondary-heading">{{ BackEnd_skill.name }}</h3> 
+                                        <div class="bar">
+                                            <span class="bar-fill" style="width: {{ BackEnd_skill.percentage }}%; "> </span> 
+                                        </div>
+                                </li>
+                            {% endfor %}
+                        </div>
+                        
+                    </ul>
+                        <br>
+
+                </section>
+                <br>
+                <br>
+                <hr>
+
+        </section>
+
+
+
+
+
+
+        <!------------------------------ Forth -> Qualification or Education Section ------------------------------>
+        <section id="EDUCATION">
+
+            <h1 class="section-primary-heading"> My Qualification </h1>
+            <span> <h2 class="section-secondary-heading"> - My overall qualification -</h2> </span>
+
+                <section class="education-section">
+                    
+                    <div class="timeline">
+
+                        <div class="education_container left-container">
+                            <img src="/static/img/mbcoe.png" alt="Madan Bhandari Collage of Engineering">
+                            <div class="text-box">
+                                <h2> MBCOE </h2>
+                                <i><small>2019 - 2024</small></i>
+                                <div class="education-detail">
+                                    <p> <b> <i class="fa-solid fa-location-dot"></i> Address </b> :- <i> Urlabari -03, Morang </i></p>
+                                    <p> <b> <i class="fa-solid fa-book-open"></i> Course </b> :- <i> Computer Engineering</i> </p>
+                                    <p> <b><i class="fa-solid fa-globe"></i> Visit </b> :- <a href="https://www.facebook.com/mbmanepal"> <i class="fa-brands fa-facebook"></i> </a> <a href="https://mbman.edu.np/"> <i class="fa-solid fa-globe"></i> </a>  </p>
+                                </div>
+                                <span class="left-container-arrow"></span>
+                            </div>
+                        </div>
+    
+                        <div class=" right-container education_container">
+                            <img src="/static/img/bishnu.png" alt="Bishnu Memorial">
+                            <div class="text-box">
+                                <h2>Bishnu Memorial</h2>
+                                <i><small>2015 - 2017</small></i>
+                                <div class="education-detail">
+                                    <p> <b> <i class="fa-solid fa-location-dot"></i> Address </b> :- <i> Dharan-9, Sunsari </i></p>
+                                    <p> <b> <i class="fa-solid fa-book-open"></i> Course </b> :- <i> High School <sup><b> (+2) </b></sup></i> </p>
+                                    <p> <b> <i class="fa-solid fa-globe"></i> Visit </b> :- <a href="https://www.facebook.com/memorialbishnu/"> <i class="fa-brands fa-facebook"></i> </a> <a href="https://www.collegenp.com/school/bishnu-memorial-secondary-school"> <i class="fa-solid fa-globe"></i> </a>  </p>
+                                </div>
+                                <span class="right-container-arrow"></span>
+                            </div>
+                        </div>
+    
+                        <div class="education_container left-container">
+                            <img src="/static/img/Amar.png" alt="sujan">
+                            <div class="text-box">
+                                <h2>Amar Boarding</h2>
+                                <i><small>2015</small></i>
+                                <div class="education-detail">
+                                    <p> <b> <i class="fa-solid fa-location-dot"></i> Address </b> :- <i> Belbari-10, Morang </i></p>
+                                    <p> <b> <i class="fa-solid fa-book-open"></i> Course </b> :- <i>Competed SLC </i> </p>
+                                    <p> <b> <i class="fa-solid fa-globe"></i> Visit </b> :- <a href="https://www.facebook.com/passedstudent"> <i class="fa-brands fa-facebook"></i> </a>   </p>
+                                </div>
+                                <span class="left-container-arrow"></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr>
+        </section>
+
+
+        <!------------------------------ Fifth -> Service Section ------------------------------>
+        <!-- <section id="SERVICE">
+
+            <h1 class="section-primary-heading"> Available Services </h1>
+
+                <section class="service-section">
+                    sujan
+                </section>
+
+        </section>
+
+
+        <hr> -->
+
+        <!------------------------------ Sixth -> Project Section ------------------------------>
+    <section id="PROJECT">
+
+            <section class="project" >
+
+                <div class="project-container">
+                    <h1 class="text-center section-primary-heading"> Projects </h1>
+                    <h3 class="text-center section-secondary-heading">- Demo related to my past projects -</h3>
+                </div>
+                <div class="project-container">
+                    <div class="swiper card-slider">
+                        <div class="swiper-wrapper">
+
+                            <!----------------------- Slide-start ----------------------->
+                            {% for project in projects %}
+                            
+                                <div class="swiper-slide card-slide">
+                                    
+                                    <div class="card">
+                                        <img src="{{ project.image.url }}" alt="{{ project.name }}">
+                                            <br>
+                                        <div class="card-detail">
+                                            <h2> {{ project.name }} </h2>
+                                            <p class="text-timeNewRoman text-purple"> <b> [ {{ project.website_type }} ] </b></p>
+                                            <p><span> {{ project.detail }} </span></p>
+                                            <a href="{{ project.link }}">  <button type="submit" class="btn"> Github <i class="fa-brands fa-github"></i> </button> </a> 
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+                            {% endfor %}
+                            <!------------------------- Slide-end ------------------------->
+                    
+                        </div>
+                        
+                        <div class="card-slider-control">
+                        <div class="swiper-button-prev slider-arrow">
+                            <i class="fa-solid fa-circle-arrow-left"></i>
+                        </div>
+                        <div class="swiper-button-next slider-arrow">
+                            <i class="fa-solid fa-circle-arrow-right"></i>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        </div>
+            
+                    </div>
+                    
+                </div>
+
+                
+                <hr>
+            </section>
+    </section>
+
+
+
+
+
+
+                <!------------------------------ Seventh -> Contact Me Section ------------------------------>
+                <section id="CONTACT-ME">
+
+                    <h1 class="section-primary-heading"> Contact </h1>
+                    <span> <h2 class="section-secondary-heading">- Message and Get in touch with me - </h2> </span>
+        
+                        <section class="contact-section">
+                            
+                            <div class="contact-left">
+                                                <div></div>
+                                    <div class="address-detail">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <h1>  Address  </h1>
+                                        <p> Belbari-10, Morang</p>
+                                        <P> Kathmandu, Bagmati</P>
+                                        <p>NEPAL</p>
+                                    </div>
+
+                                    <div class="phone-detail">
+                                        <i class="fa-solid fa-phone"></i>
+                                        <h1>  Phone  </h1>
+                                        <p>   +977 9805376861  </p>
+                                    </div>
+
+                                    <div class="email-detail">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <h1>  Email  </h1>
+                                        <p> rsujan140.in@gmail.com </p>
+                                        <p> sujanrai20070140@gmail.com </p>
+                                    </div>
+                                            <div></div>
+                            </div>
+
+                            <div class="contact-right">
+                                    <h1 >Send your message here</h1>
+                                    <p> If you have any queries or work for me you can direct contact me or drop your message here </p>
+
+                                    <div class="form-container">
+                                        <form action="." method="post">
+                                            {% csrf_token %}
+                                                {{form}}
+                                                
+                                                <button class="btn" type="submit"> Send Now <i class="fa-solid fa-paper-plane"></i> </button>
+                                                <br>
+                                        </form>
+                                        <br>
+                                        
+                                    </div>
+                            </div>
+                        </section>
+                        <hr>
+        
+                </section>
+        
+        
+        
+                <hr>
+
+</div>
+
+
+{% endblock content %}
