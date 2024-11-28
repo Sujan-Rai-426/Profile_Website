@@ -97,14 +97,23 @@ WSGI_APPLICATION = 'Profile.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
-DATABASES["defaults"] = dj_database_url.parse(config("DATABASE_URL"))
+
+# Define my database for local host and production
+if config('DJANGO_DEVELOPMENT', default='False') == 'True':
+    # Local sqlit3 configuration for local host development
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+else:
+    #  Production configuration (PostgreSQL via Render) 
+        DATABASES = {
+            'default': dj_database_url.parse(config('DATABASE_URL'))
+        }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
