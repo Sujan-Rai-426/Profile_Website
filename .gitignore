@@ -1,0 +1,4 @@
+
+
+# Consist of file that should be private and ignore by git
+.env
