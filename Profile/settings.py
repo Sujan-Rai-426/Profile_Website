@@ -159,15 +159,18 @@ USE_TZ = True
 # MEDIA_URL = 'media/'
 # MEDIA_ROOT = BASE_DIR / 'media'
 
-STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
 
-if DEBUG:
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  #Aditional static files for development 
-else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # Directory for static files in production
+# static files contain ( CSS, JavaScripts, images )
+STATIC_URL = '/static/'  #Urls for static files
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] # Development dicrectories for static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # Production directory for collected static files
 
-MEDIA_ROOT = [os.path.join(BASE_DIR, 'media')]  # Directory for uploaded media files
+# Media files (Uploaded by user or admin)
+MEDIA_URL = '/media/' #URLS for media files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Directory for media files
+
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
