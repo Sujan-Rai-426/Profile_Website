@@ -38,7 +38,7 @@
         z-index: 11;
         position: fixed;
         left : 4vw;
-        top: 7vh;
+        top: 10vh;
 
         width: 50px;
         height: 26px;
@@ -55,6 +55,7 @@
         display: flex;
         color: rgb(5, 23, 26);
         z-index: 10;
+        height: auto;
         
     }
     nav .nav-left{
@@ -314,7 +315,6 @@
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(15px);
         border-radius: 15px;
-        z-index: 0;
         padding-bottom: 17px;
     }
     .card img{

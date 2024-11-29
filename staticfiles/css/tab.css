@@ -2,6 +2,11 @@
 
 @media (min-width: 799px) and (max-width: 1225px) {
 
+    #toggle-switch-label{
+        top: 15vh;
+    }
+
+
 /*================= UTILITY CLASS====================== */
     .btn{
         border-radius: 10px;

@@ -688,14 +688,16 @@ nav li{
     margin: 0 auto;
 }
 .card-slider {
-    height: 100vh;
-    padding: 2rem 0;
+    height: auto;
+    padding-bottom: 5rem;
+    padding-top: 2rem;
     position: relative;
     width: auto;
 }
 
 .card-slide {
     width: auto;
+    padding-bottom: 45px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -703,7 +705,7 @@ nav li{
 }
 .card{
     height:auto;
-    width: 28vw;
+    width: 25vw;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(15px);
     border-radius: 15px;
@@ -716,7 +718,7 @@ nav li{
     border-radius: 15px;
 }
 .card-detail{
-    padding: 8px 28px 2px 28px;    
+    padding: 2px 28px 15px 28px;    
 }
 .card-detail h1{
     font-size: 1.5rem;
