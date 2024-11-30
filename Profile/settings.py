@@ -35,7 +35,7 @@ ALLOWED_HOSTS = config("ALLOWED_HOSTS").split(",")
 
 # Manually added for email message form contact
 # Looking to send emails in production? Check out our Email API/SMTP product!
-if DEBUG:
+if not DEBUG:
     EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
     EMAIL_HOST_USER = '777e0d15e6c1b9'
     EMAIL_HOST_PASSWORD = '8dfdbdbd700e2d'
