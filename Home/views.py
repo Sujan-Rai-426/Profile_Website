@@ -40,7 +40,7 @@ def Index_View(request):
     else:
         form = Contact_Form()
     
-    return render(request, 'Home/index.html', {'form': form, 'projects': projects, 'FrontEnd_skills': FrontEnd_skills, 'BackEnd_skills': BackEnd_skills, 'download_images': download_files})
+    return render(request, 'Home/index.html', {'form': form, 'projects': projects, 'FrontEnd_skills': FrontEnd_skills, 'BackEnd_skills': BackEnd_skills, 'download_files': download_files})
 
 
 # Logic For incomplete projects
