@@ -30,7 +30,7 @@ def Index_View(request):
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
             #  Get message in our email form sender using below html template Home/email/contactform.html
-            html = render_to_string('Home/email/contactform.html', {'name':name, 'email':email, 'subject':subject, 'message':message})
+            html = render_to_string('email/contactform.html', {'name':name, 'email':email, 'subject':subject, 'message':message})
             send_mail('The contact form subject', 'This is the message', 'rsujan140.in@gmail.com', ['rsujan140.in@gmail.com'], html_message=html)
             messages.success(request, " Your message has been delivered successfully... ")
             return redirect("index")
