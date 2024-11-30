@@ -23,10 +23,11 @@ class Project(models.Model):
     website_type = models.CharField(max_length=20, choices= WEBSITE_TYPE_CHOICES, default='Static Website',)
     detail = models.TextField(max_length = 100, blank=False)
     link = models.URLField(blank=True, null=True)
-    image = models.ImageField(upload_to='project_img/', blank=False, null=False)
+    image = models.ImageField(upload_to='upload_project_img/', blank=False, null=False)
     
     def __str__(self):
         return self.name
+
 
 # Model class for skill section of front end
 class Front_End_Skill(models.Model):
@@ -35,9 +36,19 @@ class Front_End_Skill(models.Model):
     def __str__(self):
         return self.name
 
+
 # Model class for skill section of back end
 class Back_End_Skill(models.Model):
     name = models.CharField(max_length=20, blank=False)
     percentage = models.IntegerField (validators=[MinValueValidator(0), MaxValueValidator(100)] ,null=True ,blank=False)
     def __str__(self):
         return self.name
+
+
+# Models for dowmload section for downloading files like resume images and other pdf for user
+class Download(models.Model):
+    name = models.CharField(max_length=50, null=False, blank=False)
+    file = models.FileField(upload_to='download_file/', blank=False, null=False)
+    def __str__(self):
+        return self.name
+    
