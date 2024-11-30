@@ -40,7 +40,7 @@ if DEBUG:
     EMAIL_HOST_USER = '777e0d15e6c1b9'
     EMAIL_HOST_PASSWORD = '8dfdbdbd700e2d'
     EMAIL_PORT = '2525'
-else:
+else:   
     EMAIL_BACKEND = "djnago.core.mail.backends.smtp.EmailBackend"
     EMAIL_HOST = "smtp.gmail.com"
     EMAIL_PORT = 587
