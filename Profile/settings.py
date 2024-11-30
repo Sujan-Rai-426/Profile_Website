@@ -35,13 +35,13 @@ ALLOWED_HOSTS = config("ALLOWED_HOSTS").split(",")
 
 # Manually added for email message form contact
 # Looking to send emails in production? Check out our Email API/SMTP product!
-if not DEBUG:
+if DEBUG:
     EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
     EMAIL_HOST_USER = '777e0d15e6c1b9'
     EMAIL_HOST_PASSWORD = '8dfdbdbd700e2d'
     EMAIL_PORT = '2525'
 else:   
-    EMAIL_BACKEND = "djnago.core.mail.backends.smtp.EmailBackend"
+    EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
     EMAIL_HOST = "smtp.gmail.com"
     EMAIL_PORT = 587
     EMAIL_USE_TLS = True
