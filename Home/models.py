@@ -23,7 +23,7 @@ class Project(models.Model):
     website_type = models.CharField(max_length=20, choices= WEBSITE_TYPE_CHOICES, default='Static Website',)
     detail = models.TextField(max_length = 100, blank=False)
     link = models.URLField(blank=True, null=True)
-    image = models.ImageField(upload_to='media/project_img/')
+    image = models.ImageField(upload_to='project_img/', blank=False, null=False)
     
     def __str__(self):
         return self.name
