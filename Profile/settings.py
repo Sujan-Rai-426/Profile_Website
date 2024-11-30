@@ -67,10 +67,10 @@ MIDDLEWARE = [
 ]
 
 # Manually added for security related settings
-SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = True
 SECURE_HSTS_SECOND = 0
-CSRF_COOKIE_SECURE = False
-SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 
 ROOT_URLCONF = 'Profile.urls'
@@ -160,14 +160,29 @@ USE_TZ = True
 # MEDIA_ROOT = BASE_DIR / 'media'
 
 
-# static files contain ( CSS, JavaScripts, images )
-STATIC_URL = '/static/'  #Urls for static files
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] # Development dicrectories for static files
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # Production directory for collected static files
 
-# Media files (Uploaded by user or admin)
-MEDIA_URL = '/media/' #URLS for media files
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Directory for media files
+
+
+# # static files contain ( CSS, JavaScripts, images )
+# STATIC_URL = '/static/'  #Urls for static files
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] # Development dicrectories for static files
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # Production directory for collected static files
+
+# # Media files (Uploaded by user or admin)
+# MEDIA_URL = '/media/' #URLS for media files
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Directory for media files
+
+
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+if DEBUG:
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = '/media/' 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
 
 
 
