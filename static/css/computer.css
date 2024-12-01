@@ -142,8 +142,8 @@ a .btn {
     #toggle-switch-label{
         z-index: 11;
         position: fixed;
-        left : 3vw;
-        top: 14vh;
+        left : 2vw;
+        top: 16vh;
 
         width: 50px;
         height: 26px;
@@ -280,6 +280,8 @@ nav li{
     left: 0;
     right: 0;
     top: auto;
+    margin-left: -5px;
+    margin-right: -5px;
     position: fixed;
     z-index: 11;
     padding: 5px;

@@ -62,10 +62,10 @@
 
     /* Alert Message */
     .success-msg{
-        margin-top: 62px;
+        margin-top: 58px;
     }
     .error-msg{
-        margin-top: 62px;
+        margin-top: 58px;
     }
 
 /* --------------------------------Home Section---------------------------------- */
@@ -73,7 +73,7 @@
         padding-top: 120px;
     }
     .home-section{
-        height: 85vh;
+        height: auto;
         padding: 20px 15px;
         display: flex;
         justify-content: space-around;
