@@ -324,12 +324,12 @@
         /* ---------------Contact Form STYLING--------------- */
     /*  For other input field in contact form*/
     .form-label1{
-        height: 10vh;
+        height: 4vh;
         width: 100%;
     }
     /* For main message input in contact form  */
     .form-label2{
-        height: 22vh;
+        height: 10vh;
         width: 100%;
     }
 
