@@ -37,8 +37,8 @@
     #toggle-switch-label{
         z-index: 11;
         position: fixed;
-        left : 4vw;
-        top: 7vh;
+        left : .9vw;
+        top: 1.2vh;
 
         width: 50px;
         height: 26px;
