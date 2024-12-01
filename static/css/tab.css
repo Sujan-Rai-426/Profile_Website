@@ -32,7 +32,7 @@
 
     /* --- Toggle switch --- */
     #toggle-switch-label{
-        top: 15vh;
+        top: 10vh;
     }
 /* --------------------------------Navbar Section---------------------------------- */
     nav{
@@ -58,9 +58,11 @@
     /* Alert Message */
     .success-msg{
         margin-top: 58px;
+        padding: 6px 15px;
     }
     .error-msg{
         margin-top: 58px;
+        padding: 6px 15px;
     }
 
 /* --------------------------------Home Section---------------------------------- */
