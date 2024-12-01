@@ -55,6 +55,14 @@
     }
     
 
+    /* Alert Message */
+    .success-msg{
+        margin-top: 62px;
+    }
+    .error-msg{
+        margin-top: 62px;
+    }
+
 /* --------------------------------Home Section---------------------------------- */
     #HOME{
         padding-top: 120px;

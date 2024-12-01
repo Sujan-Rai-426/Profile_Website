@@ -281,6 +281,8 @@ nav li{
     right: 0;
     top: auto;
     position: fixed;
+    z-index: 11;
+    padding: 5px;
 }
 .success-msg{
     margin-top: 65px;
