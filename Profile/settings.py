@@ -162,37 +162,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-# STATIC_URL = 'static/'
-# # Manually added apps static file
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static",
-# ]
-# STATIC_ROOT = BASE_DIR / 'staticfiles'
-# # Manually added apps media file
-# MEDIA_URL = 'media/'
-# MEDIA_ROOT = BASE_DIR / 'media'
-
-
-
-
-
-# # static files contain ( CSS, JavaScripts, images )
-# STATIC_URL = '/static/'  #Urls for static files
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] # Development dicrectories for static files
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # Production directory for collected static files
-
-# # Media files (Uploaded by user or admin)
-# MEDIA_URL = '/media/' #URLS for media files
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Directory for media files
-
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 if DEBUG:
+    # In development, look for additional static files in the 'static' folder
     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    # In production, static files will be served from STATIC_ROOT
+    STATICFILES_DIRS = []
 
 MEDIA_URL = '/media/' 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
