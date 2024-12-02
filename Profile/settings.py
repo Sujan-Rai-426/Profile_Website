@@ -170,10 +170,7 @@ if DEBUG:   #for serving during development in local host
 else: # For serving in deloyed project
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     MEDIA_URL = '/media/'  
-    MEDIA_ROOT = {
-        'image': 'C:/Users/Eastpoint/Desktop/Profile/media/upload_project_img',
-        'file': 'C:/Users/Eastpoint/Desktop/Profile/media/download_file',
-    }
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
 
 
 
