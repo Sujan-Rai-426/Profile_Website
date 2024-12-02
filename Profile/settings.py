@@ -169,9 +169,11 @@ if DEBUG:   #for serving during development in local host
     
 else: # For serving in deloyed project
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    MEDIA_URL = 'https://lthcfaoupzpwbwryshzl.supabase.co/storage/v1/object/public/media/'
-    MEDIA_ROOT = 'Profile/'
-
+    MEDIA_URL = '/media/'  
+    MEDIA_ROOT = {
+        'images': 'C:/Users/Eastpoint/Desktop/Profile/media/upload_project_img',
+        'files': 'C:/Users/Eastpoint/Desktop/Profile/media/download_file',
+    }
 
 
 
