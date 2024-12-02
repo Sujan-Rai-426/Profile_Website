@@ -168,7 +168,8 @@ if DEBUG:   #for serving during development in local host
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
     
 else: # For serving in deloyed project
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles')]
     MEDIA_URL = '/media/'  
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
 
