@@ -162,13 +162,18 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-if DEBUG:
+if DEBUG:   #for serving during development in local host
     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-else:
+    MEDIA_URL = '/media/' 
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
+    
+else: # For serving in deloyed project
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-MEDIA_URL = '/media/' 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
+    MEDIA_URL = '/media/'  
+    MEDIA_ROOT = {
+        'images': 'C:/Users/Eastpoint/Desktop/Profile/media/upload_project_img',
+        'files': 'C:/Users/Eastpoint/Desktop/Profile/media/download_file',
+    }
 
 
 
