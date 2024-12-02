@@ -171,8 +171,8 @@ else: # For serving in deloyed project
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     MEDIA_URL = '/media/'  
     MEDIA_ROOT = {
-        'images': 'C:/Users/Eastpoint/Desktop/Profile/media/upload_project_img',
-        'files': 'C:/Users/Eastpoint/Desktop/Profile/media/download_file',
+        'image': 'C:/Users/Eastpoint/Desktop/Profile/media/upload_project_img',
+        'file': 'C:/Users/Eastpoint/Desktop/Profile/media/download_file',
     }
 
 
