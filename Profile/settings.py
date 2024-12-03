@@ -16,6 +16,11 @@ from pathlib import Path
 import dj_database_url
 from decouple import config
 import cloudinary_storage
+import cloudinary
+# Import the cloudinary.api for managing assets
+import cloudinary.api
+# Import the cloudinary.uploader for uploading assets
+import cloudinary.uploader
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -61,7 +66,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # Manually created app
-    'Home','cloudinary','cloudinary_storage',
+    'cloudinary_storage','cloudinary','Home',
 ]
 
 MIDDLEWARE = [
@@ -76,7 +81,7 @@ MIDDLEWARE = [
 ]
 
 # Manually added for security related settings
-if DEBUG:
+if not DEBUG:
     SECURE_SSL_REDIRECT = False
     SECURE_HSTS_SECOND = 0
     CSRF_COOKIE_SECURE = False
@@ -112,10 +117,8 @@ WSGI_APPLICATION = 'Profile.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-
-
 # Define my database for local host and production
-if config('DJANGO_DEVELOPMENT', default='False') == 'True': #debug is true
+if DEBUG: #debug is true
     # Local sqlit3 configuration for local host development
     DATABASES = {
         'default': {
@@ -123,22 +126,10 @@ if config('DJANGO_DEVELOPMENT', default='False') == 'True': #debug is true
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-else:
-    #  Production configuration (PostgreSQL via Render) 
-        DATABASES = {
-            'default': dj_database_url.parse(config('DATABASE_URL'))
-        }
-        
-
-# CLOUDINARY CONFIGURATION when debug is false
-# ====================================
-if config('DJANGO_DEVELOPMENT', default='False') != 'True':
-    CLOUDINARY_STORAGE = {
-        'CLOUD_NAME': config('CLOUD_NAME', default=''),
-        'API_KEY': config('CLOUD_API_KEY', default=''),
-        'API_SECRET': config('CLOUD_API_SECRET', default=''),
+else:  #  Production configuration (PostgreSQL via railway) 
+    DATABASES = {
+        'default': dj_database_url.parse(config('DATABASE_URL'))
     }
-    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 # Password validation
@@ -172,22 +163,24 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-if DEBUG:   #for serving during development in local host
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-    MEDIA_URL = '/media/' 
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
+MEDIA_URL = f"https://res.cloudinary.com/{os.getenv('CLOUD_NAME')}/image/upload/"  # Cloudinary URLs
+
+
+if DEBUG:
+    MEDIA_ROOT = BASE_DIR / 'media'  # Access Local media folder for development
     
-else: # For serving in deloyed project
-    # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles')]
-    MEDIA_URL = "/Profile Website/"
-    # MEDIA_URL = f"https://res.cloudinary.com/{config('CLOUD_NAME')}/"  
-    MEDIA_ROOT = None
+else:
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage', # Access cloudinary folder for deployment
 
-
-
+# CLOUDINARY storage for media files
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': config('CLOUD_NAME'),
+    'API_KEY': config('CLOUD_API_KEY'),
+    'API_SECRET': config('CLOUD_API_SECRET'),
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
