@@ -182,8 +182,8 @@ if DEBUG:   #for serving during development in local host
 else: # For serving in deloyed project
     # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles')]
-    MEDIA_URL = '/media/'  
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
+    MEDIA_URL = f"https://res.cloudinary.com/{config('CLOUD_NAME')}/"  
+    MEDIA_ROOT = None
 
 
 
