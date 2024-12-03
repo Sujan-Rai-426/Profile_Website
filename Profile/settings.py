@@ -15,6 +15,7 @@ from pathlib import Path
 # Manually imported for customized render database url
 import dj_database_url
 from decouple import config
+import cloudinary_storage
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -60,7 +61,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # Manually created app
-    'Home',
+    'Home','cloudinary','cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -114,7 +115,7 @@ WSGI_APPLICATION = 'Profile.wsgi.application'
 
 
 # Define my database for local host and production
-if config('DJANGO_DEVELOPMENT', default='False') == 'True':
+if config('DJANGO_DEVELOPMENT', default='False') == 'True': #debug is true
     # Local sqlit3 configuration for local host development
     DATABASES = {
         'default': {
@@ -127,6 +128,17 @@ else:
         DATABASES = {
             'default': dj_database_url.parse(config('DATABASE_URL'))
         }
+        
+
+# CLOUDINARY CONFIGURATION when debug is false
+# ====================================
+if config('DJANGO_DEVELOPMENT', default='False') != 'True':
+    CLOUDINARY_STORAGE = {
+        'CLOUD_NAME': config('CLOUD_NAME', default=''),
+        'API_KEY': config('API_KEY', default=''),
+        'API_SECRET': config('API_SECRET', default=''),
+    }
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 # Password validation
