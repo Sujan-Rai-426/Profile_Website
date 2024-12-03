@@ -76,7 +76,7 @@ MIDDLEWARE = [
 ]
 
 # Manually added for security related settings
-if not DEBUG:
+if DEBUG:
     SECURE_SSL_REDIRECT = False
     SECURE_HSTS_SECOND = 0
     CSRF_COOKIE_SECURE = False
@@ -115,7 +115,7 @@ WSGI_APPLICATION = 'Profile.wsgi.application'
 
 
 # Define my database for local host and production
-if config('DJANGO_DEVELOPMENT', default='False') != 'True': #debug is true
+if config('DJANGO_DEVELOPMENT', default='False') == 'True': #debug is true
     # Local sqlit3 configuration for local host development
     DATABASES = {
         'default': {
@@ -132,7 +132,7 @@ else:
 
 # CLOUDINARY CONFIGURATION when debug is false
 # ====================================
-if config('DJANGO_DEVELOPMENT', default='False') == 'True':
+if config('DJANGO_DEVELOPMENT', default='False') != 'True':
     CLOUDINARY_STORAGE = {
         'CLOUD_NAME': config('CLOUD_NAME', default=''),
         'API_KEY': config('CLOUD_API_KEY', default=''),
@@ -174,7 +174,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-if not DEBUG:   #for serving during development in local host
+if DEBUG:   #for serving during development in local host
     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
     MEDIA_URL = '/media/' 
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
