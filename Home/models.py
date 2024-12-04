@@ -22,7 +22,7 @@ class Project(models.Model):
     ]
     name = models.CharField(max_length=50, blank=False)
     website_type = models.CharField(max_length=20, choices= WEBSITE_TYPE_CHOICES, default='Static Website',)
-    detail = models.TextField(max_length = 100, blank=False)
+    detail = models.TextField(max_length = 150, blank=False)
     link = models.URLField(blank=True, null=True)
     image = CloudinaryField('image', folder='media_Profile_website/upload_project_img/', blank=False, null=False)
     # image = models.ImageField(upload_to='Profile_website/upload_project_img/', blank=False, null=False)
@@ -55,3 +55,8 @@ class Download(models.Model):
     def __str__(self):
         return self.name
     
+# Model to show my current address of developer class
+class CurrentAddress(models.Model):
+    location = models.CharField(max_length=50, null=False, blank=False)
+    def __str__(self):
+        return self.location

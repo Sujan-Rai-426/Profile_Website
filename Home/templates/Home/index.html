@@ -64,11 +64,17 @@
                         <img src="/static/img/sujan1.jpg" alt="sujan">
                     </div>
 
+                    
                     <div class="about-right">
-                        <p><b class="text-purple big-text">Hello!!!</b> This is Sujan. My current address is Belbari, Nepal. I love creating new things using imagination and bringing them to life. Currently I'm studying Computer Science & Engineering in <b class="text-purple">Madan Bhandari Collage of Engineering, Urlabari. </b> I spent most of my time infront of my computer developing or learning new skill and in free time I like to spend time with my family and friends. </p>
-                            <br>
 
-                        
+                        <p><b class="text-purple big-text">Hello!!!</b> This is Sujan. My current address is 
+                            {% for address in current_address %}
+                                <b class="text-skyblue"> <i class="fa-solid fa-location-dot"></i> {{ address.location }}.</b>
+                            {% endfor %}
+                                I love creating new things using imagination and bringing them to life. Currently I'm studying Computer Science & Engineering in <b class="text-purple">Madan Bhandari Collage of Engineering, Urlabari. </b> I spent most of my time infront of my computer developing or learning new skill and in free time I like to spend time with my family and friends.
+                        </p>
+                                
+                            <br>
                         
                         {% for doc in download_files %}
                             
@@ -283,8 +289,9 @@
                                         <i class="fa-solid fa-location-dot"></i>
                                         <h1>  Address  </h1>
                                         <p> Belbari-10, Morang</p>
-                                        <P> Kathmandu, Bagmati</P>
-                                        <p>NEPAL</p>
+                                        {% for address in current_address %}
+                                            <P> {{ address.location }}.</P>
+                                        {% endfor %}
                                     </div>
 
                                     <div class="phone-detail">
