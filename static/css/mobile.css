@@ -62,6 +62,12 @@
         letter-spacing: 2px;
         padding: 3px;
     }
+    nav .nav-left:hover{
+        font-size: 1.36rem;
+        letter-spacing: 2px;
+        padding: 3px;
+        color: blueviolet;
+    }
     .nav-right {
         /* color: rgb(30 181 127); */
         flex-direction: column;
@@ -90,6 +96,7 @@
     }
     .nav-right a li{
         padding: 15px 0;
+        font-size: 1rem;
     
     }
     .open-sidebar-button{
@@ -334,20 +341,34 @@
     }
     .card-detail{
         text-align: justify;
-        padding: 5px 10px;
+        padding: 5px 0px;
     }
-    .card-detail h1{
-        font-size: .7rem;
-        text-align: left;
-        font-weight: 400;
+    .card-detail h2{
+        font-size: 1.2rem;
+        padding-bottom: .5rem;
+        text-align: center;
+        font-weight: 600;
+        font-family: 'bootstrap-icons';
+    }
+    .card-detail p b{
+        font-size: .9rem;
+        padding-top: .7rem;
     }
     .card-detail p{
-        padding-top: .5rem;
+        padding-top: .1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: .8rem;
         text-align: left;
         font-weight: 300;
     }
+    .card-detail div{
+        display: flex;
+        justify-content: center;
+    }
     .card-detail .btn{
-        padding: 5px 5px;
+        padding: 5px 8px;
+        margin: .9rem 0;
     }
     .card-slider-control .slider-arrow {
         display: none;
