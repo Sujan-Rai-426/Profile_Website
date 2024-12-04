@@ -165,7 +165,7 @@
         text-align: left;
         padding: 1px 5px;
         margin: 0 5px;
-        flex-direction: column;
+        flex-direction: row;
     }
     .Front-End-Skill, .Back-End-Skill{
         margin: 3px 2.5px 3px 2.5px;
@@ -184,7 +184,7 @@
         margin: 50px 0 0 0;
     }
     .education_container{
-        width: 65%;
+        width: 62%;
         padding: 10px 35px;
     }
     .text-box{
