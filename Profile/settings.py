@@ -166,21 +166,27 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-MEDIA_URL = f"https://res.cloudinary.com/{os.getenv('CLOUD_NAME')}/image/upload/"  # Cloudinary URLs
 
-
-if DEBUG:
-    MEDIA_ROOT = BASE_DIR / 'media'  # Access Local media folder for development
+if DEBUG:  #for development
+    MEDIA_ROOT = BASE_DIR / 'media'  # Access Local media folder
     
-else:
+else: # for deployment
+    MEDIA_URL = f"https://res.cloudinary.com/{os.getenv('CLOUD_NAME')}/image/upload/"  # Cloudinary URLs
     DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage', # Access cloudinary folder for deployment
+    # CLOUDINARY storage for media files
+    CLOUDINARY_STORAGE = {
+        'CLOUD_NAME': config('CLOUD_NAME'),
+        'API_KEY': config('CLOUD_API_KEY'),
+        'API_SECRET': config('CLOUD_API_SECRET'),
+    }
+    # Cloudinary Configuration
+    cloudinary.config(
+        cloud_name=config('CLOUD_NAME'),
+        api_key=config('CLOUD_API_KEY'),
+        api_secret=config('CLOUD_API_SECRET'),
+        secure=True,  # Ensures HTTPS URLs
+    )
 
-# CLOUDINARY storage for media files
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': config('CLOUD_NAME'),
-    'API_KEY': config('CLOUD_API_KEY'),
-    'API_SECRET': config('CLOUD_API_SECRET'),
-}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

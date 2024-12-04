@@ -2,7 +2,7 @@
 
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
-from cloudinary import uploader
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
@@ -24,7 +24,8 @@ class Project(models.Model):
     website_type = models.CharField(max_length=20, choices= WEBSITE_TYPE_CHOICES, default='Static Website',)
     detail = models.TextField(max_length = 100, blank=False)
     link = models.URLField(blank=True, null=True)
-    image = models.ImageField(upload_to='Profile_website/upload_project_img/', blank=False, null=False)
+    image = CloudinaryField('image', folder='Profile_website/upload_project_img/', blank=False, null=False)
+    # image = models.ImageField(upload_to='Profile_website/upload_project_img/', blank=False, null=False)
     
     def __str__(self):
         return self.name
@@ -49,7 +50,8 @@ class Back_End_Skill(models.Model):
 # Models for dowmload section for downloading files like resume images and other pdf for user
 class Download(models.Model):
     name = models.CharField(max_length=50, null=False, blank=False)
-    file = models.FileField(upload_to='Profile_website/download_file/', blank=False, null=False)
+    file = CloudinaryField('file', folder='Profile_website/download/', blank=False, null=False)
+    # file = models.FileField(upload_to='Profile_website/download_file/', blank=False, null=False)
     def __str__(self):
         return self.name
     
