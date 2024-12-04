@@ -179,13 +179,13 @@ else: # for deployment
         'API_KEY': config('CLOUD_API_KEY'),
         'API_SECRET': config('CLOUD_API_SECRET'),
     }
-    # Cloudinary Configuration
-    cloudinary.config(
-        cloud_name=config('CLOUD_NAME'),
-        api_key=config('CLOUD_API_KEY'),
-        api_secret=config('CLOUD_API_SECRET'),
-        secure=True,  # Ensures HTTPS URLs
-    )
+# Cloudinary Configuration
+cloudinary.config(
+    cloud_name=config('CLOUD_NAME'),
+    api_key=config('CLOUD_API_KEY'),
+    api_secret=config('CLOUD_API_SECRET'),
+    secure=True,  # Ensures HTTPS URLs
+)
 
 
 # Default primary key field type
