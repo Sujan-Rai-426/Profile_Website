@@ -81,7 +81,7 @@ MIDDLEWARE = [
 ]
 
 # Manually added for security related settings
-if DEBUG:
+if not DEBUG:
     SECURE_SSL_REDIRECT = False
     SECURE_HSTS_SECOND = 0
     CSRF_COOKIE_SECURE = False
@@ -168,6 +168,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
 if DEBUG:  #for development
+    MEDIA_URL='/media/'
     MEDIA_ROOT = BASE_DIR / 'media'  # Access Local media folder
     
 else: # for deployment
@@ -184,7 +185,7 @@ cloudinary.config(
     cloud_name=config('CLOUD_NAME'),
     api_key=config('CLOUD_API_KEY'),
     api_secret=config('CLOUD_API_SECRET'),
-    secure=True,  # Ensures HTTPS URLs
+    # secure=True,  # Ensures HTTPS URLs
 )
 
 

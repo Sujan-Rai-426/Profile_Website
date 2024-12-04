@@ -50,7 +50,7 @@ class Back_End_Skill(models.Model):
 # Models for dowmload section for downloading files like resume images and other pdf for user
 class Download(models.Model):
     name = models.CharField(max_length=50, null=False, blank=False)
-    file = CloudinaryField('file', resource_type='raw', folder='media_Profile_website/download/', blank=False, null=False)
+    file = CloudinaryField('file', folder='media_Profile_website/download/', transformation={"format": "jpg"}, blank=False, null=False)
     # file = models.FileField(upload_to='Profile_website/download_file/', blank=False, null=False)
     def __str__(self):
         return self.name
