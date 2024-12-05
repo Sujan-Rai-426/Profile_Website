@@ -244,8 +244,7 @@
         padding: 0 1px;
         margin: 5px 0px;
         border: none;
-        background-color: transparent;
-        background: transparent;
+        background: none;
     }
     .skill-section .skill-level li {
         list-style: none;
