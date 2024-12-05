@@ -242,8 +242,7 @@
         width: 92%;
         padding: 0 1px;
         margin: 5px 0px;
-        border: none;
-        background: none;
+        border: .35px solid lightgreen;
     }
     .skill-section .skill-level li {
         list-style: none;
