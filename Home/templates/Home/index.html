@@ -78,7 +78,7 @@
                         
                         {% for doc in download_files %}
                             
-                            <a href="{{ doc.file.url|add:'?fl_attachment=true' }}" class="btn" download="{{ doc.name }}" type="submit">Download CV <i class="fa-solid fa-download"></i> </a>
+                            <a href="{{ doc.file.url|add:'?fl_attachment=true&attachment_name='|add:doc.name }}" class="btn" download="{{ doc.name }}" type="submit">Download CV <i class="fa-solid fa-download"></i> </a>
                             
                         {% endfor %}
                         
