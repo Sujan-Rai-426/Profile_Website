@@ -242,8 +242,10 @@
     .skill-section{
         width: 92%;
         padding: 0 1px;
-        border: none;
         margin: 5px 0px;
+        border: none;
+        background-color: transparent;
+        background: transparent;
     }
     .skill-section .skill-level li {
         list-style: none;
@@ -274,7 +276,7 @@
 /* ------------------------Education or Qualification Section---------------------- */
     #EDUCATION {
         width: 100%;
-        padding: 38px 0 0 0;
+        padding: 38px 0 25px 0;
     }
     .education-section{
         padding-bottom: 0;
