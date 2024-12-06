@@ -19,6 +19,7 @@ class Project(models.Model):
     WEBSITE_TYPE_CHOICES = [
         ('Static Website', 'Static Website'),
         ('Dynamic Website', 'Dynamic Website'),
+        ('Web Application', 'Web Application'),
         ('Visit Below', 'Visit Below')
     ]
     name = models.CharField(max_length=50, blank=False)
