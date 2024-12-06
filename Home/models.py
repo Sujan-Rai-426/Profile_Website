@@ -19,9 +19,10 @@ class Project(models.Model):
     WEBSITE_TYPE_CHOICES = [
         ('Static Website', 'Static Website'),
         ('Dynamic Website', 'Dynamic Website'),
+        ('Visit Below', 'Visit Below')
     ]
     name = models.CharField(max_length=50, blank=False)
-    website_type = models.CharField(max_length=20, choices= WEBSITE_TYPE_CHOICES, default='Static Website',)
+    website_type = models.CharField(max_length=20, choices= WEBSITE_TYPE_CHOICES, default='Static Website')
     detail = models.TextField(max_length = 150, blank=False)
     link = models.URLField(blank=True, null=True)
     image = CloudinaryField('image', folder='media_Profile_website/upload_project_img/', blank=False, null=False)
