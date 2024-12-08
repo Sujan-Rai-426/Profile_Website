@@ -29,9 +29,13 @@
     .text-Secondary-heading{
         font-size: .8rem;
         letter-spacing: 1.1px;
-        color: gray;
+        color: rgb(179, 179, 179);;
     }
-
+    .text-Secondary-paragraph{
+        font-size: .68rem;
+        color: gray;
+        font-weight: 370;
+    }
     
     /* === Toggle button === */
     #toggle-switch-label{
@@ -244,6 +248,9 @@
         padding: 0 1px;
         margin: 5px 0px;
         border: .35px solid lightgreen;
+    }
+    .skill-level{
+        gap: .5px
     }
     .skill-section .skill-level li {
         list-style: none;

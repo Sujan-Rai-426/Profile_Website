@@ -29,7 +29,12 @@
     .text-Secondary-heading{
         font-size: .8rem;
         letter-spacing: 1.1px;
+        color: rgb(179, 179, 179);;
+    }
+    .text-Secondary-paragraph{
+        font-size: .68rem;
         color: gray;
+        font-weight: 370;
     }
     
     /* === Toggle button === */
@@ -237,6 +242,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .skill-level{
+        gap: .5px
     }
     .skill-section{
         width: 92%;
