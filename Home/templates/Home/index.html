@@ -109,10 +109,14 @@
                             <!-------------------- For front-end-skill upload from database dynamically -------------------->
                             {% for FrontEnd_skill in FrontEnd_skills %}
                                 <li>
-                                    <h3 class="text-ibm text-Secondary-heading">{{ FrontEnd_skill.name }}</h3> 
-                                        <div class="bar">
-                                            <span class="bar-fill" style="width: {{ FrontEnd_skill.percentage }}%; "> </span> 
-                                        </div>
+                                    <div class="skill-name">
+                                        <h3 class="text-ibm text-Secondary-heading">{{ FrontEnd_skill.name }}</h3> 
+                                        <p class="text-ibm text-Secondary-paragraph">{{ FrontEnd_skill.percentage }} %</p>
+                                    </div>
+
+                                    <div class="bar">
+                                        <span class="bar-fill" style="width: {{ FrontEnd_skill.percentage }}%; "> </span> 
+                                    </div>
                                 </li>
                             {% endfor %}
                         </div>
@@ -121,10 +125,14 @@
                             <!-------------------- For front-end-skill upload from database dynamically -------------------->
                             {% for BackEnd_skill in BackEnd_skills %}
                                 <li>
-                                    <h3 class="text-ibm text-Secondary-heading">{{ BackEnd_skill.name }}</h3> 
-                                        <div class="bar">
-                                            <span class="bar-fill" style="width: {{ BackEnd_skill.percentage }}%; "> </span> 
-                                        </div>
+                                    <div class="skill-name">
+                                        <h3 class="text-ibm text-Secondary-heading">{{ BackEnd_skill.name }}</h3> 
+                                        <p class="text-ibm text-Secondary-paragraph">{{ BackEnd_skill.percentage }} %</p>
+                                    </div>
+
+                                    <div class="bar">
+                                        <span class="bar-fill" style="width: {{ BackEnd_skill.percentage }}%; "> </span> 
+                                    </div>
                                 </li>
                             {% endfor %}
                         </div>
