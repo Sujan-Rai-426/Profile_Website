@@ -90,6 +90,8 @@ hr{
 /* Button */
 .btn-box{
     display: flex;
+    gap: 20px;
+    margin-top: 15px;
 }
 .btn{
     
@@ -99,8 +101,6 @@ hr{
     border-radius: 10px;
     font-size: .95rem;
     font-weight: 600;
-    margin-top: 20px ;
-    margin-right: 20px;
     /* background: rgba(26, 26, 26, 0.637); */
     box-shadow: .5px .5px 1px white;
     transition: .1s ease-out;
@@ -721,6 +721,11 @@ nav li{
 }
 .card-detail{
     padding: 8px 28px 2px 28px;    
+}
+.card-detail div{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
 }
 .card-detail h1{
     font-size: 1.5rem;

@@ -381,14 +381,6 @@
         font-weight: 300;
         font-family: 'IBM Plex Sans';
     }
-    .card-detail div{
-        display: flex;
-        justify-content: center;
-    }
-    .card-detail div .btn{
-        padding: 5px 7px;
-        margin: .9rem 0;
-    }
     .card-slider-control .slider-arrow {
         display: none;
     }

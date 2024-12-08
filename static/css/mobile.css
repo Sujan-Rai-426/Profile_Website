@@ -380,14 +380,6 @@
         text-align: left;
         font-weight: 300;
     }
-    .card-detail div{
-        display: flex;
-        justify-content: center;
-    }
-    .card-detail .btn{
-        padding: 5px 8px;
-        margin: .9rem 0;
-    }
     .card-slider-control .slider-arrow {
         display: none;
     }
