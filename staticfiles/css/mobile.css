@@ -332,6 +332,9 @@
     #ACHIVEMENT {
         max-width: 100%;
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .achivement{
         padding: 0 20px;
