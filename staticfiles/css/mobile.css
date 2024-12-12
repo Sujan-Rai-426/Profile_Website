@@ -328,6 +328,24 @@
     }
 
 
+    /* --------------------------------Services Section---------------------------------- */
+    #ACHIVEMENT {
+        max-width: 100%;
+        padding: 0;
+    }
+    .achivement{
+        padding: 0 20px;
+    }
+    .achivement-container {
+        max-width: 80%;
+        padding: 0;
+        margin: 0;
+    }
+    .achivement-card{
+        height:45vw;
+        width: 60vw;
+    }
+
 
     /* --------------------------------Projects Section---------------------------------- */
     #PROJECT{
@@ -349,7 +367,7 @@
     .card-slide {
         width:auto;
     }
-    .card{
+    .project-card{
         height: auto;
         width: 60vw;
         background: rgba(0, 0, 0, 0.3);
@@ -359,28 +377,28 @@
         z-index: 0;
         padding-bottom: 17px;
     }
-    .card img{
+    .project-card img{
         width: 100%;
         aspect-ratio: 1.4/1;
         padding: 2px;
     }
-    .card-detail{
+    .project-card-detail{
         text-align: justify;
         padding: 5px 0px;
     }
-    .card-detail h2{
+    .project-card-detail h2{
         font-size: 1.2rem;
         text-align: center;
         font-weight: 600;
         padding-bottom: .5rem;
         font-family: 'bootstrap-icons';
     }
-    .card-detail p b{
+    .project-card-detail p b{
         text-align: left;
         font-size: .9rem;
         padding-top: .7rem;
     }
-    .card-detail p{
+    .project-card-detail p{
         padding-top: .1rem;
         font-size: .93rem;
         padding-left: 1rem;
@@ -389,12 +407,12 @@
         font-weight: 300;
         font-family: 'IBM Plex Sans';
     }
-    .card-slider-control .slider-arrow {
+    /* .card-slider-control .slider-arrow {
         display: none;
     }
     .card-slider-control .swiper-pagination {
         bottom: 2.7rem;
-    }
+    } */
 
 
 

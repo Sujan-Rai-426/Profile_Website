@@ -56,9 +56,21 @@ class Download(models.Model):
     # file = models.FileField(upload_to='Profile_website/download_file/', blank=False, null=False)
     def __str__(self):
         return self.name
-    
+
+
 # Model to show my current address of developer class
 class CurrentAddress(models.Model):
     location = models.CharField(max_length=50, null=False, blank=False)
     def __str__(self):
         return self.location
+    
+
+# Models for the Activements or License and certificates
+class Achivements(models.Model):
+    image = CloudinaryField('image', folder='media_Profile_website/upload_project_img/', blank=False, null=False)
+    link = models.URLField(blank=True, null=True)
+    name = models.CharField(max_length=20, blank=False)
+    
+    def __str__(self):
+        return self.name
+    

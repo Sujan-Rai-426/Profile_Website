@@ -9,7 +9,7 @@ from Home.forms import Contact_Form
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 
-from Home.models import Back_End_Skill, CurrentAddress, Download, Front_End_Skill, Project
+from Home.models import Achivements, Back_End_Skill, CurrentAddress, Download, Front_End_Skill, Project
 
 
 
@@ -21,6 +21,7 @@ def Index_View(request):
     BackEnd_skills = Back_End_Skill.objects.all() #for back end skill model class
     download_files = Download.objects.all() # for Downlaod models to downlaod resume images 
     current_address = CurrentAddress.objects.all() # for Downlaod models to downlaod resume images 
+    achivements = Achivements.objects.all() #for Achiveements model to showcase the achivements or license and ceertificate
     
     # For contact from model
     if request.method == 'POST':
@@ -41,11 +42,8 @@ def Index_View(request):
     else:
         form = Contact_Form()
     
-    return render(request, 'Home/index.html', {'form': form, 'projects': projects, 'FrontEnd_skills': FrontEnd_skills, 'BackEnd_skills': BackEnd_skills, 'download_files': download_files, 'current_address': current_address})
+    return render(request, 'Home/index.html', {'form': form, 'projects': projects, 'FrontEnd_skills': FrontEnd_skills, 'BackEnd_skills': BackEnd_skills, 'download_files': download_files, 'current_address': current_address, 'achivements': achivements})
 
 
-# Logic For incomplete projects
-def ComingSoon_View(request):
-    return render(request, 'Home/ComingSoon.html')
 
 

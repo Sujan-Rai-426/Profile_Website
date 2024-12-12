@@ -208,6 +208,18 @@
     }
 
 
+/* --------------------------------Services Section---------------------------------- */
+#ACHIVEMENT {
+    max-width: 80%;
+}
+.achivement{
+    padding: 0 30px 0px 30px;
+}
+.achivement-container {
+    max-width: 97%;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
 
 
 
@@ -229,7 +241,7 @@
     .card-slide {
         width: auto;
     }
-    .card{
+    .project-card{
         height: auto;
         width: 35vw;
         background: rgba(0, 0, 0, 0.3);
@@ -237,34 +249,34 @@
         z-index: 0;
         padding-bottom: 17px;
     }
-    .card img{
+    .project-card img{
         width: 100%;
         aspect-ratio: 1.4/1;
         padding: 2px;
     }
-    .card-detail{
+    .project-card-detail{
         padding: 10px 30px 0 30px;    
     }
-    .card-detail h1{
+    .project-card-detail h1{
         font-size: .9rem;
         text-align: left;
         font-weight: 400;
     }
-    .card-detail p{
+    .project-card-detail p{
         padding-top: .7rem;
         text-align: left;
         font-weight: 300;
     }
-    .card-detail .btn{
+    .project-card-detail .btn{
         padding: 5px 5px;
         font-size: 1.2rem;
     }
-    .card-slider-control .slider-arrow {
+    /* .card-slider-control .slider-arrow {
         display: none;
     }
     .card-slider-control .swiper-pagination {
         bottom: 2rem;
-    }
+    } */
 
 
 

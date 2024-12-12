@@ -58,7 +58,7 @@
         <!------------------------------ Second -> About Section ------------------------------>
         <section id="ABOUT">
 
-            <h1 class="section-primary-heading">About</h1>
+            <h1 class="section-primary-heading"><i class="fa-solid fa-circle-info"></i> About</h1>
             <span> <h2 class="section-secondary-heading">- Everything about me -</h2> </span>
                 <section class="about-section">
 
@@ -99,7 +99,7 @@
         <!------------------------------ Third -> Skill Section ------------------------------>
         <section id="SKILL">
 
-            <h1 class="section-primary-heading"> My Skills </h1>
+            <h1 class="section-primary-heading"><i class="bi bi-rocket-fill"></i>  My Skills </h1>
             <span> <h2 class="section-secondary-heading"> - My overall technical skills -</h2> </span>
 
                 <section class="skill-section">
@@ -155,7 +155,7 @@
         <!------------------------------ Forth -> Qualification or Education Section ------------------------------>
         <section id="EDUCATION">
 
-            <h1 class="section-primary-heading"> My Qualification </h1>
+            <h1 class="section-primary-heading"><i class="bi bi-mortarboard-fill"></i> My Qualification </h1>
             <span> <h2 class="section-secondary-heading"> - My overall qualification -</h2> </span>
 
                 <section class="education-section">
@@ -215,7 +215,51 @@
         </section>
 
 
-        <!------------------------------ Fifth -> Service Section ------------------------------>
+
+
+        <!------------------------------ Fifth -> lICENSE AND CERTIFICATION Section ------------------------------>
+
+            <section id="ACHIVEMENT" class="Achivement" >
+
+                <div class="achivement-container">
+                    <h1 class="text-center section-primary-heading"><i class="fa-solid fa-certificate"></i> Achivements </h1>
+                    <h3 class="text-center section-secondary-heading">- My License and Certificates -</h3>
+                </div>
+                <div class="achivement-container">
+                    <div class="swiper card-slider">
+                        <div class="swiper-wrapper">
+
+                            <!----------------------- Slide-start ----------------------->
+                            {% for achivement in achivements %}
+                            
+                                <div class="swiper-slide card-slide">
+                                    <div class="achivement-card">
+                                            <picture>
+                                                <a href="{{ achivement.link }}"> 
+                                                    <img src="{{ achivement.image.url }}" loading="lazy" alt="{{ achivement.name }}"> 
+                                                </a>
+                                            </picture>
+                                    </div>
+                                </div>
+
+                            {% endfor %}
+                            <!------------------------- Slide-end ------------------------->
+                    
+                        </div>
+                        
+                    
+                    </div>
+                    
+                </div>
+
+                
+                <hr>
+            </section>
+
+
+
+
+        <!------------------------------ Sixth -> Service Section ------------------------------>
         <!-- <section id="SERVICE">
 
             <h1 class="section-primary-heading"> Available Services </h1>
@@ -229,13 +273,13 @@
 
         <hr> -->
 
-        <!------------------------------ Sixth -> Project Section ------------------------------>
+        <!------------------------------ Seventh -> Project Section ------------------------------>
     <section id="PROJECT">
 
             <section class="project" >
 
                 <div class="project-container">
-                    <h1 class="text-center section-primary-heading"> Projects </h1>
+                    <h1 class="text-center section-primary-heading"> <i class="bi bi-person-workspace"></i> Projects </h1>
                     <h3 class="text-center section-secondary-heading">- Demo related to my past projects -</h3>
                 </div>
                 <div class="project-container">
@@ -247,12 +291,12 @@
                             
                                 <div class="swiper-slide card-slide">
                                     
-                                    <div class="card">
+                                    <div class="project-card">
                                         <picture>
                                             <img src="{{ project.image.url }}" loading="lazy" alt="{{ project.name }}">
                                         </picture>
                                             <br>
-                                        <div class="card-detail">
+                                        <div class="project-card-detail">
                                             <h2> {{ project.name }} </h2>
                                             <p class="text-timeNewRoman text-purple"> <b> [ {{ project.website_type }} ] </b></p>
                                             <p><span> {{ project.detail }} </span></p>
@@ -269,7 +313,7 @@
                     
                         </div>
                         
-                        <div class="card-slider-control">
+                        <!-- <div class="card-slider-control">
                         <div class="swiper-button-prev slider-arrow">
                             <i class="fa-solid fa-circle-arrow-left"></i>
                         </div>
@@ -277,7 +321,7 @@
                             <i class="fa-solid fa-circle-arrow-right"></i>
                         </div>
                         <div class="swiper-pagination"></div>
-                        </div>
+                        </div> -->
             
                     </div>
                     
@@ -293,10 +337,10 @@
 
 
 
-                <!------------------------------ Seventh -> Contact Me Section ------------------------------>
+                <!------------------------------ Eighth -> Contact Me Section ------------------------------>
                 <section id="CONTACT-ME">
 
-                    <h1 class="section-primary-heading"> Contact </h1>
+                    <h1 class="section-primary-heading"> <i class="bi bi-person-lines-fill"></i> Contact </h1>
                     <span> <h2 class="section-secondary-heading">- Message and Get in touch with me - </h2> </span>
         
                         <section class="contact-section">

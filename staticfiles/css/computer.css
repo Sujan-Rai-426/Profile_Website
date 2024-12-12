@@ -649,13 +649,39 @@ nav li{
 
 
 
+/* -------------------------- Achivements Secton ---------------------------------- */
 
 
 
 
 
 /* --------------------------------Services Section---------------------------------- */
-
+#ACHIVEMENT {
+    max-width: 70%;
+}
+.achivement{
+    padding: 0 50px 0px 50px;
+}
+.achivement-container {
+    max-width: 97%;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+.achivement-card{
+    height:50vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.599);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    z-index: 0;
+    display: flex;
+}
+.achivement-card picture img{
+    width: 99%;
+    height: 99%;
+    padding: 2px;
+    border-radius: 15px;
+}
 
 
 
@@ -671,7 +697,7 @@ nav li{
     text-decoration: none;
 }
 #PROJECT {
-    max-width: 100%;
+    max-width: 90%;
     font-family: "Montserrat", sans-serif;
 }
 .project{
@@ -706,7 +732,7 @@ nav li{
     margin: 0 auto;
 }
 .card-slider {
-    height: 100vh;
+    height: auto;
     padding: 2rem 0;
     position: relative;
     width: auto;
@@ -719,7 +745,7 @@ nav li{
     flex-direction: column;
     align-items: center;
 }
-.card{
+.project-card{
     height:auto;
     width: 28vw;
     background: rgba(0, 0, 0, 0.3);
@@ -727,37 +753,37 @@ nav li{
     border-radius: 15px;
     z-index: 0;
 }
-.card img{
+.project-card img{
     width: 100%;
     height: 55%;
     padding: 2px;
     border-radius: 15px;
 }
-.card-detail{
+.project-card-detail{
     padding: 8px 28px 2px 28px;    
 }
-.card-detail div{
+.project-card-detail div{
     display: flex;
     justify-content: center;
     margin: 20px;
 }
-.card-detail h1{
+.project-card-detail h1{
     font-size: 1.5rem;
     text-align: left;
     font-weight: 1000;
     z-index: 2;
 }
-.card-detail .text-center{
+.project-card-detail .text-center{
     text-align: center;
     margin: 0;
     padding: 0;
 }
-.card-detail p{
+.project-card-detail p{
     padding-top: 1rem;
     text-align: left;
     font-weight: 500;
 }
-.swiper-slide-shadow-left,
+/* .swiper-slide-shadow-left,
 .swiper-slide-shadow-right {
     display: none;
 }
@@ -805,7 +831,7 @@ nav li{
 .slider-arrow i{
     font-size: 3rem;
     color: #353b48;
-}
+} */
 
 
 
