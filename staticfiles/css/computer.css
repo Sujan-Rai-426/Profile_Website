@@ -676,6 +676,9 @@ nav li{
     z-index: 0;
     display: flex;
 }
+.achivement-card p{
+    margin-top: 2vh;
+}
 .achivement-card picture img{
     width: 99%;
     height: 99%;
