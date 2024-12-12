@@ -67,7 +67,7 @@ class CurrentAddress(models.Model):
 
 # Models for the Activements or License and certificates
 class Achivements(models.Model):
-    image = CloudinaryField('image', folder='media_Profile_website/upload_project_img/', blank=False, null=False)
+    image = CloudinaryField('image', folder='media_Profile_website/Achivements_img/', blank=False, null=False)
     link = models.URLField(blank=True, null=True)
     name = models.CharField(max_length=20, blank=False)
     
