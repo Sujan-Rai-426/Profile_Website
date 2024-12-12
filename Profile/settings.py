@@ -83,7 +83,6 @@ MIDDLEWARE = [
 # Manually added for security related settings
 if DEBUG:
     SECURE_SSL_REDIRECT = False
-    SECURE_HSTS_SECOND = 0
     CSRF_COOKIE_SECURE = False
     SESSION_COOKIE_SECURE = False
 else:

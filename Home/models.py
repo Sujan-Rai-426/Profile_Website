@@ -69,7 +69,7 @@ class CurrentAddress(models.Model):
 class Achivements(models.Model):
     image = CloudinaryField('image', folder='media_Profile_website/Achivements_img/', blank=False, null=False)
     link = models.URLField(blank=True, null=True)
-    name = models.CharField(max_length=20, blank=False)
+    name = models.CharField(max_length=50, blank=False)
     
     def __str__(self):
         return self.name
